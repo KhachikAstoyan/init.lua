@@ -43,5 +43,7 @@ return {
       auto_session_suppress_dirs = { '~/', '~/Projects', '~/Downloads', '/' },
       -- log_level = 'debug',
     }
-  }
+  },
+  'lewis6991/gitsigns.nvim',
+  'm4xshen/autoclose.nvim'
 }
