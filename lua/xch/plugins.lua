@@ -29,11 +29,6 @@ return {
   'rafamadriz/friendly-snippets',
   'onsails/lspkind.nvim',
   {
-    "ThePrimeagen/harpoon",
-    branch = "harpoon2",
-    dependencies = { "nvim-lua/plenary.nvim" }
-  },
-  {
     'rmagatti/auto-session',
     lazy = false,
     dependencies = {
@@ -45,5 +40,6 @@ return {
     }
   },
   'lewis6991/gitsigns.nvim',
-  'm4xshen/autoclose.nvim'
+  'm4xshen/autoclose.nvim',
+  'numToStr/Comment.nvim',
 }
