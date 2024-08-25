@@ -5,10 +5,6 @@ return {
     -- or                              , branch = '0.1.x',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
-  {
-    'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' }
-  },
   {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
   'nvim-tree/nvim-tree.lua',
   'nvim-tree/nvim-web-devicons',
@@ -42,4 +38,18 @@ return {
   'lewis6991/gitsigns.nvim',
   'm4xshen/autoclose.nvim',
   'numToStr/Comment.nvim',
+  "ramilito/winbar.nvim",
+  {
+    'projekt0n/github-nvim-theme',
+    lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    priority = 1000, -- make sure to load this before all the other start plugins
+    config = function()
+      require('github-theme').setup({
+      })
+    end,
+  },
+  'romgrk/doom-one.vim',
+  'nvim-lualine/lualine.nvim',
+  {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+  'sonph/onehalf',
 }

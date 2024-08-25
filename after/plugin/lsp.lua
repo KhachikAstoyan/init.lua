@@ -71,8 +71,9 @@ cmp.setup({
 		--	documentation = cmp.config.window.bordered(),
 		--},
 		mapping = cmp.mapping.preset.insert({
-			['k'] = cmp.mapping.select_prev_item(cmp_select),
-			['j'] = cmp.mapping.select_next_item(cmp_select),
+			['<Up>'] = cmp.mapping.select_prev_item(cmp_select),
+			['<Down>'] = cmp.mapping.select_next_item(cmp_select),
+			['<Tab>'] = cmp.mapping.confirm({ select = true }),
 			['<Enter>'] = cmp.mapping.confirm({ select = true }),
 			['<C-Space>'] = cmp.mapping.complete(),
 		}),
