@@ -17,10 +17,19 @@ vim.api.nvim_set_keymap('n', '<leader>h', ':split<CR>', { noremap = true, silent
 vim.keymap.set('n', '<C-b>', ':NvimTreeToggle<CR>', opts)
 
 -- Switch buffers
-  
 -- Remap <Tab> to switch to the next buffer
 vim.keymap.set('n', '<Tab>', ':bnext<CR>', { noremap = true, silent = true })
 
 -- Remap <Shift-Tab> to switch to the previous buffer
 vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', { noremap = true, silent = true })
+
+-- close the current buffer
+vim.keymap.set('n', '<C-x>', ':bd<CR>', opts)
+
+-- Move line up with Alt+Up or Alt+k
+vim.api.nvim_set_keymap('n', '<A-Up>', ':m .-2<CR>==', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<A-k>', ':m .-2<CR>==', { noremap = true, silent = true })
+-- Move line down with Alt+Down or Alt+j
+vim.api.nvim_set_keymap('n', '<A-Down>', ':m .+1<CR>==', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<A-j>', ':m .+1<CR>==', { noremap = true, silent = true })
 
