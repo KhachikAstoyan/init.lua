@@ -33,3 +33,23 @@ vim.api.nvim_set_keymap('n', '<A-k>', ':m .-2<CR>==', { noremap = true, silent =
 vim.api.nvim_set_keymap('n', '<A-Down>', ':m .+1<CR>==', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<A-j>', ':m .+1<CR>==', { noremap = true, silent = true })
 
+-- resolve conflicts
+vim.keymap.set('n', 'co', '<Plug>(git-conflict-ours)')
+vim.keymap.set('n', 'ct', '<Plug>(git-conflict-theirs)')
+vim.keymap.set('n', 'cb', '<Plug>(git-conflict-both)')
+vim.keymap.set('n', 'c0', '<Plug>(git-conflict-none)')
+vim.keymap.set('n', '[x', '<Plug>(git-conflict-prev-conflict)')
+vim.keymap.set('n', ']x', '<Plug>(git-conflict-next-conflict)')
+
+-- Copy to clipboard
+vim.api.nvim_set_keymap("v", "<leader>y", '"+y', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>Y", '"+yg_', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>y", '"+y', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>yy", '"+yy', { noremap = true, silent = true })
+
+-- Paste from clipboard
+vim.api.nvim_set_keymap("n", "<leader>p", '"+p', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>P", '"+P', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<leader>p", '"+p', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<leader>P", '"+P', { noremap = true, silent = true })
+

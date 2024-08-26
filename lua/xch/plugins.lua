@@ -52,4 +52,7 @@ return {
   'nvim-lualine/lualine.nvim',
   {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
   'f-person/git-blame.nvim',
+  'stevearc/conform.nvim',
+  {'akinsho/git-conflict.nvim', version = "*", config = true},
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 }
 }
