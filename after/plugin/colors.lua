@@ -28,4 +28,4 @@ require('vscode').setup({
 
 -- vim.cmd[[colorscheme vscode]]
 vim.cmd.colorscheme "catppuccin-mocha"
-vim.api.nvim_set_hl(0, 'LineNr', { fg='#404040', bold=false })
+-- vim.api.nvim_set_hl(0, 'LineNr', { fg='#404040', bold=false })

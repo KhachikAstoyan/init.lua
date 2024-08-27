@@ -53,3 +53,5 @@ vim.api.nvim_set_keymap("n", "<leader>P", '"+P', { noremap = true, silent = true
 vim.api.nvim_set_keymap("v", "<leader>p", '"+p', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", "<leader>P", '"+P', { noremap = true, silent = true })
 
+-- rename symbols
+vim.keymap.set("n", "<leader>rn", ":IncRename ")

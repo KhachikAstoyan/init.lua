@@ -1,6 +1,6 @@
--- local git_blame = require("gitblame")
+local git_blame = require("gitblame")
 -- This disables showing of the blame text next to the cursor
--- vim.g.gitblame_display_virtual_text = 0
+vim.g.gitblame_display_virtual_text = 0
 
 require("lualine").setup({
 	options = {
@@ -14,7 +14,7 @@ require("lualine").setup({
 				"filename",
 				path = 1,
 			},
-			-- { git_blame.get_current_blame_text, cond = git_blame.is_blame_text_available },
+			{ git_blame.get_current_blame_text, cond = git_blame.is_blame_text_available },
 		},
 		lualine_x = { "filetype" },
 		lualine_y = { "progress" },
