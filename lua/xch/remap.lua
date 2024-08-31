@@ -55,3 +55,6 @@ vim.api.nvim_set_keymap("v", "<leader>P", '"+P', { noremap = true, silent = true
 
 -- rename symbols
 vim.keymap.set("n", "<leader>rn", ":IncRename ")
+
+-- show project wide errors
+vim.keymap.set("n", "<leader>e", ":Telescope diagnostics<CR>")
