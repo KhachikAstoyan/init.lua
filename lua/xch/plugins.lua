@@ -94,4 +94,5 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
   'nvim-telescope/telescope-ui-select.nvim',
+  'github/copilot.vim'
 }
