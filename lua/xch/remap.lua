@@ -61,4 +61,3 @@ vim.keymap.set("n", "<leader>rn", ":IncRename ")
 
 -- show project wide errors
 vim.keymap.set("n", "<leader>e", ":Telescope diagnostics<CR>")
-
