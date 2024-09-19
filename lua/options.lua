@@ -1,7 +1,9 @@
-require("xch.remap")
-require("xch.lazy")
-require("xch.set")
+require "nvchad.options"
 
+-- add yours here!
+
+-- local o = vim.o
+-- o.cursorlineopt ='both' -- to enable cursorline!
 vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 vim.api.nvim_create_autocmd("TextYankPost", {
   group = "YankHighlight",
