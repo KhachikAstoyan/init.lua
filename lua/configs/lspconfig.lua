@@ -9,6 +9,8 @@ local servers = {
   "cssls",
   "rust_analyzer",
   "gopls",
+  "pyright",
+  "tailwindcss"
 }
 local nvlsp = require "nvchad.configs.lspconfig"
 
