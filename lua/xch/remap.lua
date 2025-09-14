@@ -27,8 +27,8 @@ vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', { noremap = true, silent = true
 vim.keymap.set('n', '<C-x>', ':bd<CR>', opts)
 
 -- Move line up with Alt+Up or Alt+k
-vim.api.nvim_set_keymap('n', '<A-Up>', ':m .-2<CR>==', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<A-k>', ':m .-2<CR>==', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<A-Up>', ':m .-2<CR>==', { noremap = true, silent = true })
 -- Move line down with Alt+Down or Alt+j
 vim.api.nvim_set_keymap('n', '<A-Down>', ':m .+1<CR>==', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<A-j>', ':m .+1<CR>==', { noremap = true, silent = true })
