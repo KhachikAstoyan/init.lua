@@ -1,45 +1,45 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex )
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- moving between windows
 local opts = { noremap = true, silent = true }
 
-vim.keymap.set('n', '<C-h>', '<C-w>h', opts)
-vim.keymap.set('n', '<C-j>', '<C-w>j', opts)
-vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
-vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
+vim.keymap.set("n", "<C-h>", "<C-w>h", opts)
+vim.keymap.set("n", "<C-j>", "<C-w>j", opts)
+vim.keymap.set("n", "<C-k>", "<C-w>k", opts)
+vim.keymap.set("n", "<C-l>", "<C-w>l", opts)
 
 -- split windows
-vim.api.nvim_set_keymap('n', '<leader>v', ':vsplit<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>h', ':split<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>v", ":vsplit<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>h", ":split<CR>", { noremap = true, silent = true })
 
 -- NvimTree mappings
-vim.keymap.set('n', '<C-b>', ':NvimTreeToggle<CR>', opts)
+vim.keymap.set("n", "<C-b>", ":NvimTreeToggle<CR>", opts)
 
 -- Switch buffers
 -- Remap <Tab> to switch to the next buffer
-vim.keymap.set('n', '<Tab>', ':bnext<CR>', { noremap = true, silent = true })
+vim.keymap.set("n", "<Tab>", ":bnext<CR>", { noremap = true, silent = true })
 
 -- Remap <Shift-Tab> to switch to the previous buffer
-vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', { noremap = true, silent = true })
+vim.keymap.set("n", "<S-Tab>", ":bprevious<CR>", { noremap = true, silent = true })
 
 -- close the current buffer
-vim.keymap.set('n', '<C-x>', ':bd<CR>', opts)
+vim.keymap.set("n", "<C-x>", ":bd<CR>", opts)
 
 -- Move line up with Alt+Up or Alt+k
-vim.api.nvim_set_keymap('n', '<A-k>', ':m .-2<CR>==', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<A-Up>', ':m .-2<CR>==', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<A-k>", ":m .-2<CR>==", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<A-Up>", ":m .-2<CR>==", { noremap = true, silent = true })
 -- Move line down with Alt+Down or Alt+j
-vim.api.nvim_set_keymap('n', '<A-Down>', ':m .+1<CR>==', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<A-j>', ':m .+1<CR>==', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<A-Down>", ":m .+1<CR>==", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<A-j>", ":m .+1<CR>==", { noremap = true, silent = true })
 
 -- resolve conflicts
-vim.keymap.set('n', 'co', '<Plug>(git-conflict-ours)')
-vim.keymap.set('n', 'ct', '<Plug>(git-conflict-theirs)')
-vim.keymap.set('n', 'cb', '<Plug>(git-conflict-both)')
-vim.keymap.set('n', 'c0', '<Plug>(git-conflict-none)')
-vim.keymap.set('n', '[x', '<Plug>(git-conflict-prev-conflict)')
-vim.keymap.set('n', ']x', '<Plug>(git-conflict-next-conflict)')
+vim.keymap.set("n", "co", "<Plug>(git-conflict-ours)")
+vim.keymap.set("n", "ct", "<Plug>(git-conflict-theirs)")
+vim.keymap.set("n", "cb", "<Plug>(git-conflict-both)")
+vim.keymap.set("n", "c0", "<Plug>(git-conflict-none)")
+vim.keymap.set("n", "[x", "<Plug>(git-conflict-prev-conflict)")
+vim.keymap.set("n", "]x", "<Plug>(git-conflict-next-conflict)")
 
 -- Copy to clipboard
 vim.api.nvim_set_keymap("v", "<leader>y", '"+y', { noremap = true, silent = true })
@@ -58,3 +58,11 @@ vim.keymap.set("n", "<leader>rn", ":IncRename ")
 
 -- show project wide errors
 vim.keymap.set("n", "<leader>e", ":Telescope diagnostics<CR>")
+
+-- LSP keybindings
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show hover documentation" })
+vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, { desc = "Show function signature" })
+
+-- Claude
+vim.keymap.set("n", "<leader>cc", "<cmd>ClaudeCode<CR>", { desc = "Toggle Claude Code" })

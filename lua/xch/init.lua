@@ -60,6 +60,12 @@ vim.keymap.set("n", "<leader>fw", fzf.diagnostics_workspace, { desc = "FzfLua di
 vim.keymap.set("n", "<leader>fg", fzf.live_grep, { desc = "FzfLua live grep" })
 vim.keymap.set("n", "<leader>fb", fzf.buffers, { desc = "FzfLua buffers" })
 vim.keymap.set("n", "<leader>fh", fzf.help_tags, { desc = "FzfLua help tags" })
+vim.keymap.set("n", "<leader>fs", fzf.lsp_document_symbols, { desc = "FzfLua document symbols" })
+vim.keymap.set("n", "<leader>fws", fzf.lsp_workspace_symbols, { desc = "FzfLua workspace symbols" })
+vim.keymap.set("n", "<leader>fr", fzf.oldfiles, { desc = "FzfLua recent files" })
+vim.keymap.set("n", "ld", fzf.lsp_definitions, { desc = "List definitions" })
+vim.keymap.set("n", "gr", fzf.lsp_references, { desc = "Find all references" })
+vim.keymap.set("n", "gi", fzf.lsp_implementations, { desc = "Go to implementation" })
 
 -- harpoon
 local harpoon = require("harpoon")
@@ -95,3 +101,5 @@ end)
 vim.keymap.set("n", "<C-S-N>", function()
 	harpoon:list():next()
 end)
+
+vim.opt.laststatus = 3
